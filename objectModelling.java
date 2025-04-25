@@ -29,16 +29,15 @@ class Bag{
             return false; 
         }
     
-        // true if red balls are less than green balls
+        // false if red balls are less than green balls
         if (ball.color == Color.RED && rCount + 1 > gCount) {
             return false;
         } 
-        // true if yellow balls are less than or equal or 40 percent of bag capacity
-        else if (ball.color == Color.YELLOW && yCount + 1 >= (0.4 * capacity)) {
+        // false if yellow balls are less than 40 percent of bag capacity
+        else if (ball.color == Color.YELLOW && yCount + 1 > (0.4 * capacity)) {
             return false;
         }
 
-        // if above conditions are true then balls are added to list
         balls.add(ball);
         totalCount++;
 
